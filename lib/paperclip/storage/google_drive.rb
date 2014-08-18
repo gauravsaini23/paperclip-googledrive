@@ -109,6 +109,7 @@ module Paperclip
           client.authorization.client_secret = @google_drive_credentials[:client_secret]
           client.authorization.access_token = @google_drive_credentials[:access_token]
           client.authorization.refresh_token = @google_drive_credentials[:refresh_token]
+          client.authorization.fetch_access_token!
           client
         end
       end
